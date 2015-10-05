@@ -5,6 +5,14 @@ use Illuminate\Database\Eloquent\ModelNotFoundException as ModelNotFoundExceptio
 
 class ArticleController extends \BaseController {
 
+    protected $request;
+
+    protected $articles;
+
+    public function __construct(){
+
+    }
+
 	/**
 	 * Display a listing of the resource.
 	 *
