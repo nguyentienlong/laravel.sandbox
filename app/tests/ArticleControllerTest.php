@@ -12,6 +12,7 @@ class ArticleControllerTest extends TestCase{
 
     public function testCreateArticle(){
         $this->assertEquals(1,1);
+        $this->assertEquals(2,2);
         // $title = "test title";
         // $body = "test body";
         // $params = ['title'=>$title,'body'=>$body];
