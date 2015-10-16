@@ -10,13 +10,14 @@ use Carbon\Carbon;
 
 class ArticleControllerTest extends TestCase{
 
-    // public function testCreateArticle(){
-    //     $title = "test title";
-    //     $body = "test body";
-    //     $params = ['title'=>$title,'body'=>$body];
-    //     $response = $this->call('POST','/article',$params,$file=array(),$server=array(), null);
-    //     $this->assertResponseStatus(201);
-    // }
+    public function testCreateArticle(){
+        $this->assertEquals(1,1);
+        // $title = "test title";
+        // $body = "test body";
+        // $params = ['title'=>$title,'body'=>$body];
+        // $response = $this->call('POST','/article',$params,$file=array(),$server=array(), null);
+        // $this->assertResponseStatus(201);
+    }
 
     // public function testUpdateArticle(){
     //     $id = '5611090f88233feb6e8b4567';
