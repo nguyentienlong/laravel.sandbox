@@ -122,6 +122,4 @@ class ArticleController extends \BaseController {
             return Response::make(['status'=>'error'],404);
         }
 	}
-
-
 }
