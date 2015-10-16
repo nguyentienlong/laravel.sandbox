@@ -5,7 +5,12 @@
 	"license": "MIT",
 	"require": {
 		"laravel/framework": "4.2.*",
-		"jenssegers/mongodb": "2.0.*"
+		"jenssegers/mongodb": "2.0.*",
+        "behat/behat": "2.5.*",
+        "behat/mink": "1.4.*@stable",
+        "behat/mink-extension": "*",
+        "behat/mink-goutte-driver": "*",
+        "behat/mink-selenium2-driver": "*"
 	},
 	"autoload": {
 		"classmap": [
@@ -31,7 +36,8 @@
 		]
 	},
 	"config": {
-		"preferred-install": "dist"
+        "preferred-install": "dist",
+        "bin-dir": "bin/"
 	},
-	"minimum-stability": "stable"
+	"minimum-stability": "dev"
 }
