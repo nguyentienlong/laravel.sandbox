@@ -26,7 +26,8 @@ class FeatureContext extends MinkContext
    */
   public function someOtherPrecondition()
   {
-      throw new PendingException();
+      echo ('pass');
+      //throw new PendingException();
   }
 
   /**
@@ -34,7 +35,8 @@ class FeatureContext extends MinkContext
    */
   public function someActionByTheActor()
   {
-      throw new PendingException();
+      echo ('pass2');
+      //throw new PendingException();
   }
 
   /**
@@ -42,7 +44,8 @@ class FeatureContext extends MinkContext
    */
   public function someOtherAction()
   {
-      throw new PendingException();
+      echo ('pass3');
+      //throw new PendingException();
   }
 
   /**
@@ -50,7 +53,8 @@ class FeatureContext extends MinkContext
    */
   public function yetAnotherAction()
   {
-      throw new PendingException();
+      echo ('pass4');
+      //throw new PendingException();
   }
 
   /**
@@ -58,7 +62,8 @@ class FeatureContext extends MinkContext
    */
   public function someTestableOutcomeIsAchieved()
   {
-      throw new PendingException();
+      echo ('pass5');
+      //throw new PendingException();
   }
 
   /**
@@ -66,6 +71,7 @@ class FeatureContext extends MinkContext
    */
   public function somethingElseWeCanCheckHappensToo()
   {
+      echo ('pass6');
       throw new PendingException();
   }
 
