@@ -1,0 +1,17 @@
+default:
+    autoload: [ features/bootstrap ]
+    suites:
+        simple_features:
+            paths:    [ features ]
+            contexts: [ FeatureContext ]
+    extensions:
+        Behat\MinkExtension:
+            #show_auto: true
+            #show_cmd: firefox %s
+            base_url: http://laravel.sandbox/
+            goutte: ~
+            selenium2:
+                wd_host: "http://127.0.0.1:1234/wd/hub"
+                capabilities: { "browser": "phantomjs"}
+                #browser: chrome
+                #capabilities: { "browserName": "chrome", "browser": "chrome", "version":  "45", 'chrome': {'switches':['--no-sandbox']}}
