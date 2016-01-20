@@ -17,6 +17,11 @@ class MailerService
     protected $url;
 
     /**
+    * Config from app/config/optivo.php
+    */
+    protected $mailingListConfig;
+
+    /**
     * Contructor.
     *
     * @param Client $client Guzzle Client
@@ -24,7 +29,8 @@ class MailerService
     public function __construct(Client $client)
     {
         $this->client = $client;
-        $this->url = config('optivo.domain');
+	$this->url = config('optivo.domain');
+	$this->mailingListConfig = config('optivo.mailingList');
     }
 
     /**
@@ -70,9 +76,9 @@ class MailerService
 
         switch ($operation) {
             case 'sendeventmail':
-                $mailListConfig    = config('optivo.mailing-list.' . $mailingListName);
-                $bmMailingId       = $mailListConfig['id'];
-                $authorisationCode = $mailListConfig['recipient-list']['authorisation-code'];
+                $mailConfig    = $this->mailingListConfig[$mailingListName];
+                $bmMailingId       = $mailConfig['id'];
+                $authorisationCode = $mailConfig['recipient-list']['authorisation-code'];
                 $apiUrl .= '/' . $authorisationCode . '/' . $operation . '?bmMailingId=' . $bmMailingId;
                 break;
             default:
